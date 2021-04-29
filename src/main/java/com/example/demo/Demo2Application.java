@@ -25,7 +25,7 @@ public class Demo2Application implements CommandLineRunner {
     @Override
 	public void run(String...  args) throws Exception {
         // List<FurnitureSet> furnitureSetList = furnitureSetRepository.getAllFurnitureSet();
-		List<FurnitureSet> furnitureSetList = furnitureSetService.getAllFurniture_Sets();
+		List<FurnitureSet> furnitureSetList = furnitureSetService.getAllFurnitureSetWithJoin();
          for (FurnitureSet furnitureset: furnitureSetList) {
          	System.out.println(furnitureset);
 		 }

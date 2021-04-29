@@ -9,10 +9,10 @@ import java.util.List;
 
 public interface FurnitureSetRepository  extends JpaRepository<FurnitureSet, Integer > {
 
-    @Query("SELECT c FROM furniture_set c")
-    List<FurnitureSet> getAllFurniture_Set();
+    @Query("SELECT c FROM FurnitureSet c")
+    List<FurnitureSet> getAllFurnitureSet();
 
-    @Query("SELECT c FROM furniture_set c LEFT JOIN FETCH c.compositions")
-    public List<FurnitureSet> getAllFurniture_SetWithJoin();
-    //public List<FurnitureSet>
+    @Query("SELECT c FROM FurnitureSet c LEFT JOIN FETCH c.compositions")
+    public List<FurnitureSet> getAllFurnitureSetWithJoin();
+
 }

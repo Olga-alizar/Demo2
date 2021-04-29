@@ -26,7 +26,7 @@ public class FurnitureSet {
     private Passport passport;
 */
 
-    @OneToMany(mappedBy = "furniture_set", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "furniture", fetch = FetchType.EAGER)
     Set<Composition> compositions;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -75,11 +75,13 @@ public class FurnitureSet {
 
     @Override
     public String toString() {
-        return "Furniture_set{" +
+        return "FurnitureSet{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", description='" + description +
+                ", description='" + description + '\'' +
+                ", compositions=" + compositions +
+                ", furnitureList=" + furnitureList +
                 '}';
     }
 }

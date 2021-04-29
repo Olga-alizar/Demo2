@@ -11,22 +11,26 @@ import java.util.List;
 @Service
 public class FurnitureSetServiceImpl implements FurnitureSetService {
 
-    private final FurnitureSetRepository furnitureSetRepository;
+    private FurnitureSetRepository furnitureSetRepository;
+
+    public FurnitureSetServiceImpl() {
+    }
 
     @Autowired
     public FurnitureSetServiceImpl(FurnitureSetRepository furnitureSetRepository) {
         this.furnitureSetRepository = furnitureSetRepository;
     }
-/*
-    @Override
-    public List<FurnitureSet> getAllFurnitureSetsWithFurnitures() {
-        return furnitureSetRepository.getAllFurnitureSetWithJoin();
-    }
-*/
 
     @Override
-    public List<FurnitureSet> getAllFurniture_Sets() {
-        return furnitureSetRepository.getAllFurniture_Set();
+    public List<FurnitureSet> getAllFurnitureSetWithJoin() {
+        return furnitureSetRepository.getAllFurnitureSetWithJoin();
     }
+
+    @Override
+    public List<FurnitureSet> getAllFurnitureSet() {
+        return furnitureSetRepository.getAllFurnitureSet();
+    }
+
+
 }
 

@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface FurnitureSetService {
     
-    public List<FurnitureSet> getAllFurniture_Sets() ;
-
+    public List<FurnitureSet> getAllFurnitureSet() ;
+    public List<FurnitureSet> getAllFurnitureSetWithJoin();
 }

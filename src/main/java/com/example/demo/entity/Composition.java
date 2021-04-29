@@ -29,7 +29,7 @@ public class Composition {
 
     @ManyToOne( fetch = FetchType.LAZY)
     @JoinColumn(name = "furniture_set_id", insertable = false, updatable = false)
-    FurnitureSet furniture_set;
+    FurnitureSet furnitureset;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "furniture_id", insertable = false, updatable = false)
